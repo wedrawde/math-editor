@@ -3,8 +3,10 @@
 <head>
 	<meta charset='utf-8'>
 	<title>Math Editor POC</title>
+	<link rel="stylesheet" type="text/css" href="assets/components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 	<script src="assets/components/jquery/dist/jquery.min.js"></script>
+	<script src="assets/components/bootstrap/dist/js/bootstrap.js"></script>
 	<script type="text/x-mathjax-config">
 	  MathJax.Hub.Config({
 	    extensions: ["asciimath2jax.js"],
@@ -16,9 +18,42 @@
 	</script>
 	<script src="assets/components/MathJax/MathJax.js"></script>
 	</script>
+
 </head>
 <body>
-	<p>`1*32=2029292`</p>
+	<div class="menubar">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#tab1" data-toggle="tab">`sqrt(dx)`</a></li>
+			<li><a href="#tab2" data-toggle="tab">`+ ^^`</a></li>
+			<li><a href="#tab3" data-toggle="tab">`x/xdx`</a></li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane active" id="tab1">
+				<div class="row syntax-tab">
+					<div class="btn btn-default" id="-">`-`</div>
+					<div class="btn btn-default" id="+">`+`</div>
+					<div class="btn btn-default" id="*">`*`</div>
+					<div class="btn btn-default" id="/">`/`</div>
+					<div class="btn btn-default" id="-:">`-:`</div>
+					<div class="btn btn-default" id="xx">`xx`</div>
+				</div>
+				<div class="row syntax-tab">
+					<div class="btn btn-default" id="^^">`^^`</div>
+					<div class="btn btn-default" id="^^^">`^^^`</div>
+					<div class="btn btn-default" id="vv">`vv`</div>
+					<div class="btn btn-default" id="vvv">`vvv`</div>
+					<div class="btn btn-default" id="nn">`nn`</div>
+					<div class="btn btn-default" id="nnn">`nnn`</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="tab2">
+				<p>Section 2 buttons here</p>
+			</div>
+			<div class="tab-pane" id="tab3">
+				<p>Section 3 buttons here</p>
+			</div>
+		</div>
+	</div>
 	<textarea></textarea>
 	<div id="output"></div>
 <script src="assets/js/scripts.js"></script>
